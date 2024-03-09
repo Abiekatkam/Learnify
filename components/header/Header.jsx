@@ -61,8 +61,8 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 left-0 w-full h-fit flex flex-col items-start">
-      <div className="w-full h-fit lg:h-[75px] flex items-center justify-between border-b border-b-slate-500 lg:px-8 px-4 py-3 lg:py-0">
+    <header className="lg:sticky lg:top-0 z-20 w-full h-fit flex flex-col items-start bg-white/85">
+      <div className=" w-full h-fit lg:h-[75px] flex items-center justify-between border-b border-b-slate-500 lg:px-8 px-4 py-3 lg:py-0">
         <Link href="/">
           <h1 className="lg:text-3xl text-2xl font-semibold font-mono hover:text-fuchsia-500 hover:drop-shadow-lg transition-all ease-out duration-200">
             Learnify
@@ -183,58 +183,9 @@ const Header = () => {
         </div>
       </div>
 
-      {/* profile dropdown */}
-      {profileOpened && <NavProfile />}
-
-      {/* learn tab */}
-      {isLearnTabOpened && (
-        <div className="w-full lg:block hidden h-[250px] border-b border-b-slate-500">
-          <NavTabContent
-            onMouseEnterEvent={eventMouseEnterLearn}
-            onMouseLeaveEvent={eventMouseLeaveLearn}
-            isEventClick={false}
-            title="Learn"
-            description="Learn web development from expert teachers. Build real projects,
-            join our community, and accelerate your career"
-            linkTitle="Get Started"
-            linkArray={LearnNavTabList}
-          />
-        </div>
-      )}
-
-      {/* teach tab */}
-      {isTeachTabOpened && (
-        <div className="w-full lg:block hidden h-[250px] border-b border-b-slate-500">
-          <NavTabContent
-            onMouseEnterEvent={eventMouseEnterTeach}
-            onMouseLeaveEvent={eventMouseLeaveTeach}
-            isEventClick={false}
-            title="Teach"
-            description="Share your knowledge with others, earn money, and help people with their career"
-            linkTitle="Apply Now"
-            linkArray={TeachNavTabList}
-          />
-        </div>
-      )}
-
-      {/* community tab */}
-      {isCommunityTabOpened && (
-        <div className="w-full lg:block hidden h-[250px] border-b border-b-slate-500">
-          <NavTabContent
-            onMouseEnterEvent={eventMouseEnterCommunity}
-            onMouseLeaveEvent={eventMouseLeaveCommunity}
-            isEventClick={false}
-            title="Community"
-            description="Get help with programming projects, find collaborators, and make friends"
-            linkTitle="Join Now"
-            linkArray={CommunityNavTabList}
-          />
-        </div>
-      )}
-
       {/* hamburger menu */}
       {menuOpened && (
-        <div className="w-full h-fit min-h-[620px] flex lg:hidden flex-col items-start gap-4 border-b border-b-slate-500 p-2">
+        <div className="w-full h-fit min-h-[660px] absolute top-[62px] z-20 bg-white/95 flex lg:hidden flex-col items-start gap-4 border-b border-b-slate-500 p-2">
           {/* learn tab */}
           <NavMenuDropdown
             text={"Learn"}
@@ -360,6 +311,55 @@ const Header = () => {
           >
             Sign Out
           </Link>
+        </div>
+      )}
+
+      {/* profile dropdown */}
+      {profileOpened && <NavProfile />}
+
+      {/* learn tab */}
+      {isLearnTabOpened && (
+        <div className="w-full lg:absolute lg:top-[75px] lg:h-[250px] hidden lg:flex border-b border-b-slate-500">
+          <NavTabContent
+            onMouseEnterEvent={eventMouseEnterLearn}
+            onMouseLeaveEvent={eventMouseLeaveLearn}
+            isEventClick={false}
+            title="Learn"
+            description="Learn web development from expert teachers. Build real projects,
+            join our community, and accelerate your career"
+            linkTitle="Get Started"
+            linkArray={LearnNavTabList}
+          />
+        </div>
+      )}
+
+      {/* teach tab */}
+      {isTeachTabOpened && (
+        <div className="w-full lg:absolute lg:top-[75px] lg:h-[250px] hidden lg:flex border-b border-b-slate-500">
+          <NavTabContent
+            onMouseEnterEvent={eventMouseEnterTeach}
+            onMouseLeaveEvent={eventMouseLeaveTeach}
+            isEventClick={false}
+            title="Teach"
+            description="Share your knowledge with others, earn money, and help people with their career"
+            linkTitle="Apply Now"
+            linkArray={TeachNavTabList}
+          />
+        </div>
+      )}
+
+      {/* community tab */}
+      {isCommunityTabOpened && (
+        <div className="w-full lg:absolute lg:top-[75px] lg:h-[250px] hidden lg:flex border-b border-b-slate-500">
+          <NavTabContent
+            onMouseEnterEvent={eventMouseEnterCommunity}
+            onMouseLeaveEvent={eventMouseLeaveCommunity}
+            isEventClick={false}
+            title="Community"
+            description="Get help with programming projects, find collaborators, and make friends"
+            linkTitle="Join Now"
+            linkArray={CommunityNavTabList}
+          />
         </div>
       )}
     </header>

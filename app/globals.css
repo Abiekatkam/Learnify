@@ -6,3 +6,23 @@ html,
 body {
   height: 100%;
 }
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: currentColor;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: white;
+    opacity: 50%;
+  }
+}
