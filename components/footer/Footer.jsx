@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="w-full lg:w-[40%] h-full flex flex-col items-start justify-between gap-12">
           <div className="w-fit flex flex-col items-start gap-5">
             <Link href="/">
-              <h1 className="lg:text-6xl text-4xl font-semibold font-mono hover:text-fuchsia-500 hover:drop-shadow-lg transition-all ease-out duration-200">
+              <h1 className="lg:text-8xl text-6xl font-semibold  hover:text-fuchsia-500 hover:drop-shadow-lg transition-all ease-out duration-200 font-DancingScript">
                 Learnify
               </h1>
             </Link>

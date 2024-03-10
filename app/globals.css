@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,5 +26,11 @@ body {
   ::-webkit-scrollbar-thumb:hover {
     background: white;
     opacity: 50%;
+  }
+}
+
+@layer components {
+  .dancingFont {
+    font-family: "Dancing Script", cursive;
   }
 }

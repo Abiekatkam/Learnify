@@ -14,7 +14,7 @@ const NavTabContent = ({
 }) => {
   return (
     <div
-      className="w-full lg:h-full h-fit px-4 lg:px-8 lg:py-2 flex items-start lg:gap-2 gap-6 lg:flex-row flex-col border-b border-slate-500 lg:border-b-0 pb-2 bg-white/95"
+      className="w-full lg:h-full h-fit px-4 lg:px-8 lg:py-2 flex items-start lg:gap-2 gap-6 lg:flex-row flex-col border-b border-slate-500 lg:border-b-0 pb-2 bg-white"
       onMouseEnter={!isEventClick ? onMouseEnterEvent : undefined}
       onMouseLeave={!isEventClick ? onMouseLeaveEvent : undefined}
     >

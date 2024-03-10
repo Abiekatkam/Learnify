@@ -61,10 +61,10 @@ const Header = () => {
   };
 
   return (
-    <header className="lg:sticky lg:top-0 z-20 w-full h-fit flex flex-col items-start bg-white/85">
+    <header className="lg:sticky fixed lg:top-0 z-20 w-full h-fit flex flex-col items-start bg-white">
       <div className=" w-full h-fit lg:h-[75px] flex items-center justify-between border-b border-b-slate-500 lg:px-8 px-4 py-3 lg:py-0">
         <Link href="/">
-          <h1 className="lg:text-3xl text-2xl font-semibold font-mono hover:text-fuchsia-500 hover:drop-shadow-lg transition-all ease-out duration-200">
+          <h1 className="text-4xl font-bold font-DancingScript hover:text-fuchsia-500 hover:drop-shadow-lg transition-all ease-out duration-200">
             Learnify
           </h1>
         </Link>
@@ -185,7 +185,7 @@ const Header = () => {
 
       {/* hamburger menu */}
       {menuOpened && (
-        <div className="w-full h-fit min-h-[660px] absolute top-[62px] z-20 bg-white/95 flex lg:hidden flex-col items-start gap-4 border-b border-b-slate-500 p-2">
+        <div className="w-full h-fit min-h-[660px] fixed top-[62px] z-20 bg-white/95 flex lg:hidden flex-col items-start gap-4 border-b border-b-slate-500 p-2">
           {/* learn tab */}
           <NavMenuDropdown
             text={"Learn"}
