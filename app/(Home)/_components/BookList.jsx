@@ -2,6 +2,9 @@
 import SmallHeading from "@/components/typography/SmallHeading";
 import Link from "next/link";
 import React, { useState } from "react";
+import BookRecentList from "./BookRecentList";
+import BookPopularList from "./BookPopularList";
+import BookRatedList from "./BookRatedList";
 
 const BookList = () => {
   const [selectedCourseTab, setSelectedCourseTab] = useState("RECENT");
@@ -55,6 +58,14 @@ const BookList = () => {
       </div>
 
       {/* tab content */}
+      {/* tab content */}
+      {selectedCourseTab == "RECENT" ? (
+        <BookRecentList />
+      ) : selectedCourseTab == "POPULAR" ? (
+        <BookPopularList />
+      ) : (
+        <BookRatedList />
+      )}
 
       <Link
         href={"/"}

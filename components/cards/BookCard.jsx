@@ -1,16 +1,16 @@
-import Image from "next/image";
 import React from "react";
-import Play from "@/public/icons/play.svg";
+import Book from "@/public/icons/book.svg";
+import Image from "next/image";
 
-const CourseCard = () => {
+const BookCard = () => {
   return (
     <div className="lg:w-[310px] w-full h-[345px] lg:h-[330px] relative group">
-      <div className="w-[95%] h-[95%] absolute bottom-0 right-0 bg-fuchsia-200 rounded-lg group-hover:bg-fuchsia-300 transition-all ease-in duration-200" />
+      <div className="w-[95%] h-[95%] absolute bottom-0 right-0 bg-purple-200 rounded-lg group-hover:bg-purple-300 transition-all ease-in duration-200" />
       <div className="w-[95%] h-[95%] absolute top-0 left-0 bg-slate-100 border border-slate-500 rounded-lg p-2 flex flex-col items-start gap-3">
         <div className="w-full h-[55%] border border-slate-500 object-contain rounded-lg overflow-hidden">
           <img
-            src="https://www.newline.co/_next/image?url=https%3A%2F%2Fs3.amazonaws.com%2Fassets.fullstack.io%2Fn%2F20221114181724447_1.png&w=1920&q=75"
-            alt=""
+            src="https://www.newline.co/_next/image?url=https%3A%2F%2Fs3.amazonaws.com%2Fassets.fullstack.io%2Fn%2F20221019030519248_fs-react-typescript-v1.png&w=1920&q=75"
+            alt="book"
             className="w-full h-full group-hover:scale-110 transition-all ease-in duration-200"
           />
         </div>
@@ -38,7 +38,7 @@ const CourseCard = () => {
               </p>
             </div>
             <button className="w-12 h-12 rounded-full border-2 outline-none border-slate-500 flex items-center justify-center hover:shadow-xl active:scale-90 transition-all ease-in-out duration-200">
-              <Image src={Play} alt="play-button" />
+              <Image src={Book} alt="book-button" />
             </button>
           </div>
         </div>
@@ -47,4 +47,4 @@ const CourseCard = () => {
   );
 };
 
-export default CourseCard;
+export default BookCard;

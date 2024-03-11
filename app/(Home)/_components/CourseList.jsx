@@ -1,8 +1,10 @@
 "use client";
-import CourseCard from "@/components/cards/CourseCard";
 import SmallHeading from "@/components/typography/SmallHeading";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
+import CourseRecentList from "./CourseRecentList";
+import CoursePopularList from "./CoursePopularList";
+import CourseRatedList from "./CourseRatedList";
 
 const CourseList = () => {
   const [selectedCourseTab, setSelectedCourseTab] = useState("RECENT");
@@ -57,11 +59,13 @@ const CourseList = () => {
       </div>
 
       {/* tab content */}
-      <div className="w-full h-fit min-h-[400px] flex items-start justify-center gap-8 flex-wrap px-4">
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-      </div>
+      {selectedCourseTab == "RECENT" ? (
+        <CourseRecentList />
+      ) : selectedCourseTab == "POPULAR" ? (
+        <CoursePopularList />
+      ) : (
+        <CourseRatedList />
+      )}
 
       <Link
         href={"/"}
