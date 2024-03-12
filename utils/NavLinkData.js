@@ -47,7 +47,7 @@ export const CommunityNavTabList = [
   },
   {
     id: 2,
-    link: "/",
+    link: "/Testimonials",
     name: "What Our Students Says",
   },
 ];
