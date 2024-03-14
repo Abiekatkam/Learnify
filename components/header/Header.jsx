@@ -204,6 +204,7 @@ const Header = () => {
               description="Learn web development from expert teachers. Build real projects,
             join our community, and accelerate your career"
               linkTitle="Get Started"
+              linkUrl={"/"}
               linkArray={LearnNavTabList}
             />
           )}
@@ -225,6 +226,7 @@ const Header = () => {
               title="Teach"
               description="Share your knowledge with others, earn money, and help people with their career"
               linkTitle="Apply Now"
+              linkUrl={"/"}
               linkArray={TeachNavTabList}
             />
           )}
@@ -246,6 +248,7 @@ const Header = () => {
               title="Community"
               description="Get help with programming projects, find collaborators, and make friends"
               linkTitle="Join Now"
+              linkUrl={"/Pricing"}
               linkArray={CommunityNavTabList}
             />
           )}
@@ -328,6 +331,7 @@ const Header = () => {
             description="Learn web development from expert teachers. Build real projects,
             join our community, and accelerate your career"
             linkTitle="Get Started"
+            linkUrl={"/"}
             linkArray={LearnNavTabList}
           />
         </div>
@@ -343,6 +347,7 @@ const Header = () => {
             title="Teach"
             description="Share your knowledge with others, earn money, and help people with their career"
             linkTitle="Apply Now"
+            linkUrl={"/"}
             linkArray={TeachNavTabList}
           />
         </div>
@@ -358,6 +363,7 @@ const Header = () => {
             title="Community"
             description="Get help with programming projects, find collaborators, and make friends"
             linkTitle="Join Now"
+            linkUrl={"/Pricing"}
             linkArray={CommunityNavTabList}
           />
         </div>

@@ -93,7 +93,10 @@ const Footer = () => {
               </p>
 
               <TextAnchorLinks text="Join our Discord server" url="/" />
-              <TextAnchorLinks text="What are students says" url="/" />
+              <TextAnchorLinks
+                text="What are students says"
+                url="/Testimonials"
+              />
             </div>
 
             <div className="lg:w-[30%] w-full">

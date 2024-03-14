@@ -11,6 +11,7 @@ const NavTabContent = ({
   description,
   linkTitle,
   linkArray,
+  linkUrl,
 }) => {
   return (
     <div
@@ -28,7 +29,7 @@ const NavTabContent = ({
           <p className="text-balance text-md">{description}</p>
 
           <Link
-            href="/"
+            href={linkUrl}
             className="lg:mt-auto lg:mb-4 p-2 px-4 font-semibold text-white bg-fuchsia-600 rounded-lg border hover:border-fuchsia-600 hover:bg-white hover:text-fuchsia-600 active:scale-90 transition-all ease-in-out duration-200"
           >
             {linkTitle}
